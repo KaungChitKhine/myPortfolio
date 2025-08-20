@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website Design</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--カスタム CSS Link-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--boxicons Link-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!--google fonts link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="loader">
+        <div class="smoke">
+            <span class="welcome-css">WELCOME</span>
+        </div>
+        <video src="myVideo/smoke.mp4" id="video" autoplay muted class="fadeUp"></video>
+    </div>
+    <!--header section-->
+    <div id="content" style="display: none;"></div>
+    <header>
+        <a href="#" class="logo"><img src="img/logo.png"></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navlist">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <!--li><a href="#blog">Blog</a></li-->
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+    <!--hero section-->
+    <canvas class="home fade-in one" id="home"></canvas>
+
+    <h1>
+        <div class="myhero-Image "></div>
+        <div class="hero-text fade-in">
+            <h3>Hello I'm <br />
+               <!-- Tailwind + custom animation on hover -->
+                <h2 class="relative group w-fit overflow-hidden h-auto">
+                <!-- Split characters manually for demo -->
+                    <span class="transition-all duration-500 ease-in-out opacity-100 translate-y-0 group-hover:opacity-0 group-hover:-translate-y-2 inline-block smoke-char">KAUNG CHIT KHINE</span>
+                    <span class="absolute top-0 left-0 transition-all duration-500 ease-in-out opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 inline-block smoke-char">カウン チッ カイ</span>
+                </h2>
+                <h4>Web Design and Web Developer.. </h4>
+                <!--a href="#" class="btn">My Works</a-->
+            </h3>
+        </div>
+    </h1>
+    <!--About Section-->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="img/about.png">
+        </div>
+        <div class="about-text">
+            <h2>About Me</h2>
+            <h5>I am <span class="title-Introduce">Crateiv Designer And Developer</span></h5>
+            <div class="relative group w-fit overflow-hidden h-75">
+                <p class="transition-all duration-500 ease-in-out opacity-100 translate-y-0 group-hover:opacity-0 group-hover:-translate-y-2">
+                        Hi there! I'm a web designer and front-end developer from Myanmar, currently based in Japan. 
+                    I came here in 2014, studied Japanese for two years, then went on to an IT college where I learned web design and programming.
+                    Since 2018, I’ve been working in the Japanese IT industry—creating websites, designing logos, and building UI screens with HTML, CSS, JavaScript, Bootstrap, and WordPress. 
+                        I really enjoy small design tweaks and UI improvements—spotting those tiny details is something I’m good at.
+                    I’ve also helped train new team members and love sharing knowledge with others. 
+                        Lately, I’ve been working as a Salesforce developer, handling UI layout updates and responsive design using Apex, Aura, and Visualforce.
+                    Outside of work, I enjoy doing volunteer design projects, like logos and websites for social and community groups. Design is more than just a job for me—it’s a way to connect with people and contribute to something meaningful.
+                </p>
+                <p class="absolute top-0 left-0 transition-all duration-500 ease-in-out opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0">
+                        こんにちは！私はミャンマー出身のWebデザイナー & フロントエンド開発者です。2014年に来日してから、日本語学校やIT系専門学校で学び、2018年からは日本のIT業界でお仕事をしています。
+                    これまでに、会社のロゴやホームページのデザイン・制作をはじめ、HTML、CSS、JavaScript、Bootstrapを使ったコーディングや、WordPressの運用にも携わってきました。
+                    細かいデザイン調整やUIの改善が得意で、「ちょっとした違和感を見逃さないこと」が自分の強みだと思っています。
+                        さらに、新人さんへの技術指導やチーム内でのナレッジ共有にも関わってきたので、"みんなで良いものを作る"というチーム開発の空気も大切にしています。
+                    近年はSalesforce開発にチャレンジしており、ApexやAura、Visualforceなどを使って、営業支援システムの画面改修やモバイル対応を担当中です。
+                    使いやすく、美しい画面を作ることに強い情熱があり、集中すると時間を忘れてしまうほどです。
+                        また、デザインを通して社会に貢献したいという思いから、ボランティア活動にも取り組んでいます。
+                    民族ネットワークのロゴやTシャツの制作、社会運動を支える団体のWebサイト設計など、多くの方との出会いが自分の糧になっています。
+                </p>
+            </div>
+            <!--a href="#" class="btn">Hire me</a-->
+        </div>
+    </section>
+
+    <!--SKILL Section-->
+    <section class="skill service" id="skill">
+        <div class="about-text">
+            <h2>My Skill</h2>
+            <ul id="skills">
+                <li>
+                    HTML5
+                    <div class="bar_container">
+                        <span class="bar" data-bar='{ "color": "#cbdc00" }'>
+                            <span class="pct">95%</span>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    CSS3
+                    <div class="bar_container">
+                        <span class="bar" data-bar='{ "color": "#27ae60", "delay": 600 }'>
+                            <span class="pct">90%</span>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    JavaScript
+                    <div class="bar_container">
+                        <span class="bar" data-bar='{ "color": "#ffcc24", "delay": 1200 }'>
+                            <span class="pct">50%</span>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                <li>
+                    PHP
+                    <div class="bar_container">
+                        <span class="bar" data-bar='{ "color": "#9b59b6", "delay": 1200 }'>
+                            <span class="pct">32%</span>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    React.js
+                    <div class="bar_container">
+                        <span class="bar" data-bar='{ "color": "#ae8a33", "delay": 1800 }'>
+                            <span class="pct">35%</span>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    WordPress
+                    <div class="bar_container">
+                        <span class="bar" data-bar='{ "color": "#f05351", "delay": 2000 }'>
+                            <span class="pct">70%</span>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    Adobe Photoshop
+                    <div class="bar_container">
+                        <span class="bar" data-bar='{ "color": "#0049d7e3", "delay": 2100 }'>
+                            <span class="pct">60%</span>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    Adobe illustrator
+                    <div class="bar_container">
+                        <span class="bar" data-bar='{ "color": "#ff5e00", "delay": 2100 }'>
+                            <span class="pct">50%</span>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+    <!--Services Section-->
+    <section class="service" id="projetcts">
+        <div class="text-center">
+            <h2>My Projects</h2>
+            <h4>Crafting bold visuals that communicate ideas clearly & creatively.</h4>
+        </div>
+        <div class="service-item">
+            <div class="service-box">
+                <img class="cts-image" src="img/ctsLogo.jpg" alt="picture of image :)" />
+                <p>
+                    Client:CTS Japanese Language School<br/>
+                    Tools: Adobe illustrator<br/>
+                    Scope:Logo design,front signage<br/>
+                    Summary:Educational institutions can harness this power by selecting colors that symbolize knowledge, growth,
+                            and creativity.
+                </p>
+                <!--a href="#" class="s-btnn">Read More</a-->
+            </div>
+            <div class="service-box">
+                <img class="cts-image" src="img/obvj.jpg" alt="picture of image :)" />
+                <p>
+                    Client:OXFORD BUDDHA VIHARA Japan<br/>
+                    Tools: Adobe illustrator<br/>
+                    Scope:Logo design,front signage<br/>
+                    Summary:skillfully blends Buddhist and Japanese heritage.
+                    The central Dharmachakra (Wheel of Dharma) symbolizes<span id="dots">...</span><span id="more">the Buddha's teachings and the Noble Eightfold Path,
+                    while the integrated sakura (cherry blossom) roots the Vihara in its Japanese context and reflects the Buddhist principle of impermanence. 
+                    The traditional, ornate design conveys serenity, harmony, and deep respect for both traditions.
+                    </span> <button onclick="myFunction()" id="myBtn">Read more</button>
+                </p>
+            </div>
+            <div class="service-box">
+                <img class="ty-image" src="img/ty.jpg" alt="picture of image :)" />
+                <h3>Graphic Design</h3>
+                <p>
+                    Client:OXFORD BUDDHA VIHARA Japan<br/>
+                    Tools: Adobe illustrator<br/>
+                    Scope:Logo design,front signage<br/>
+                    Summary:skillfully blends Buddhist and Japanese heritage.
+                    The central Dharmachakra (Wheel of Dharma) symbolizes<span id="dots">...</span><span id="more">the Buddha's teachings and the Noble Eightfold Path,
+                    while the integrated sakura (cherry blossom) roots the Vihara in its Japanese context and reflects the Buddhist principle of impermanence. 
+                    The traditional, ornate design conveys serenity, harmony, and deep respect for both traditions.
+                    </span> <button onclick="myFunction()" id="myBtn">Read more</button>
+                </p>
+                <!--a href="#" class="s-btnn">Read More</a-->
+            </div>
+        </div>
+    </section>
+    <!--Portfolio-->
+    <section class="Portfolio" id="portfolio">
+        <div class="text-center">
+            <h2>projects</h2>
+        </div>
+        <div class="container">
+    <main class="main">
+        <article class="article article__01" role="tabpanel" aria-labelledby="1">
+            <figure>
+                <img class="image" src="" alt="picture of image :)" />
+                <figcaption class="text__content">
+                    <h1 class="title">First Title</h1>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Itaque aliquam natus eum
+                        adipisci saepe soluta! Nam repudiandae sed
+                        accusamus fugiat voluptas perspiciatis?
+                    </p>
+                    <button class="cta-btn">Click Here</button>
+                </figcaption>
+            </figure>
+        </article>
+        <article class="article article__02" role="tabpanel" aria-labelledby="2" hidden>
+            <figure>
+                <img class="image" src="" alt="picture of image :)" />
+                <figcaption class="text__content">
+                    <h1 class="title">Second Title</h1>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Itaque aliquam natus eum
+                        adipisci saepe soluta! Nam repudiandae sed
+                        accusamus fugiat voluptas perspiciatis?
+                    </p>
+                    <button class="cta-btn">Click Here</button>
+                </figcaption>
+            </figure>
+        </article>
+        <article class="article article__03" role="tabpanel" aria-labelledby="3" hidden>
+            <figure>
+                <img class="image" src="" alt="picture of image :)" />
+                <figcaption class="text__content">
+                    <h1 class="title">Third Title</h1>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Itaque aliquam natus eum
+                        adipisci saepe soluta! Nam repudiandae sed
+                        accusamus fugiat voluptas perspiciatis?
+                    </p>
+                    <button class="cta-btn">Click Here</button>
+                </figcaption>
+            </figure>
+        </article>
+        <article class="article article__04" role="tabpanel" aria-labelledby="4" hidden>
+            <figure>
+                <img class="image" src="" alt="picture of image :)" />
+                <figcaption class="text__content">
+                    <h1 class="title">Last Title</h1>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Itaque aliquam natus eum
+                        adipisci saepe soluta! Nam repudiandae sed
+                        accusamus fugiat voluptas perspiciatis?
+                    </p>
+                    <button class="cta-btn">Click Here</button>
+                </figcaption>
+            </figure>
+        </article>
+        <article class="article article__05" role="tabpanel" aria-labelledby="5" hidden>
+            <figure>
+                <img class="image" src="" alt="picture of image :)" />
+                <figcaption class="text__content">
+                    <h1 class="title">Final Title</h1>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Itaque aliquam natus eum
+                        adipisci saepe soluta! Nam repudiandae sed
+                        accusamus fugiat voluptas perspiciatis?
+                    </p>
+                    <button class="cta-btn">Click Here</button>
+                </figcaption>
+            </figure>
+        </article>
+    </main>
+    <aside class="aside">
+        <nav role="tablist" class="thumbnail__navigation">
+            <button role="tab" aria-selected="true" class="thumbnail__btn" id="1"></button>
+            <button role="tab" aria-selected="false" class="thumbnail__btn" id="2"></button>
+            <button role="tab" aria-selected="false" class="thumbnail__btn" id="3"></button>
+            <button role="tab" aria-selected="false" class="thumbnail__btn" id="4"></button>
+            <button role="tab" aria-selected="false" class="thumbnail__btn" id="5"></button>
+        </nav>
+    </aside>
+    </div>
+    </section>
+
+    <!--contact Section
+    <Section class="contact" id="contact">
+        <div class="left-contact">
+            <div class="in">
+                <i class='bx bxl-behance'></i>
+                <h4>Behance</h4>
+            </div>
+            <div class="in">
+                <i class='bx bxl-dribbble'></i>
+                <h4>Dribbble</h4>
+            </div>
+            <div class="in">
+                <i class='bx bxl-upwork'></i>
+                <h4>Upwork</h4>
+            </div>
+        </div>
+
+        <div class="right-contact">
+            <h2>Profiles</h2>
+            <a href="#">Hire Me</a>
+            <p>There are many variations of passages of Lorem ipsum dolor sit,
+                amet consectetur adipisicing elit. Voluptate, culpa! Facilis maxime quos
+                suscipit tenetur in aliquid doloremque quam perferendis quasi! Iure sapiente
+                ipsam doloribus maiores corporis quasi, dignissimos animi?</p>
+        </div>
+    </Section>-->
+
+    <!--end section-->
+    <section class="end-section" id="contact">
+          &#169; All Rights Reserved By<a href="#">Kaung Chit Khine.</a>
+        <div class="end-icons">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href=""><i class='bx bxl-instagram-alt'></i></a>
+            <a href=""><i class='bx bxl-twitter'></i></a>
+            <a href=""><i class='bx bxl-youtube'></i></a>
+        </div>
+    </section>
+
+    <!--scroll btn-->
+    <a href="#" class="scroll-bttn"><i class="bx bx-chevron-up"></i></a>
+
+    <!--scroll reveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--custom js file link-->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
